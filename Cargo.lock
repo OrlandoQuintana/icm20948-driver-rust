@@ -103,7 +103,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "icm_20948_driver"
+name = "icm20948-driver-rust"
 version = "0.1.0"
 dependencies = [
  "embedded-hal",
