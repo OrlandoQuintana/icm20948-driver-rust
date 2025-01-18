@@ -6,6 +6,49 @@ This project provides a complete Rust driver for the **ICM-20948 IMU** connected
 The driver is modular, portable, and thread-safe, leveraging the **embedded-hal** and **linux-embedded-hal** crates for abstraction and compatibility across platforms.
 
 ---
+## How to Use `icm20948-driver-rust`
+
+The `icm20948-driver-rust` library can be used in your Rust projects to to read acclerometer and gyro data from an ICM-20948 IMU using a raspberry pi. Follow the steps below to integrate the library into your project.
+
+### Adding `icm20948-driver-rust` as a Dependency
+
+You can include `icm20948-driver-rust` as a dependency in your `Cargo.toml` by referencing the GitHub repository. Add the following lines to your `Cargo.toml`:
+
+	[dependencies]
+	icm20948-driver-rust = { git = "https://github.com/OrlandoQuintana/icm20948-driver-rust" }
+
+This tells Cargo to pull the library directly from the GitHub repository and use it in your project.
+
+----------
+
+### Importing `icm20948-driver-rust` into Your Code
+
+To use the library in your Rust code, import the `SpiCore`, `Accelerometer`, `Gyroscope` and `IMU` structs at the top of your file. 
+
+Example:
+
+	use icm20948_driver_rust::imu::{Accelerometer, Gyroscope, IMU};
+  use icm20948_driver_rust::spi_core::SpiCore;
+
+This makes the structs available for use in your code.
+
+----------
+
+### Using the `icm20948-driver-rust` Code Locally
+
+If you prefer to clone the `icm20948-driver-rust` repository and use it as a local dependency, follow these steps:
+
+1.  Clone the repository to your local machine:
+
+		git clone https://github.com/OrlandoQuintana/icm20948-driver-rust.git
+2. Place the cloned repository in a desired location on your computer.
+3. Add the local path to your `Cargo.toml` dependencies:
+
+		[dependencies]
+		icm20948-driver-rust = { path = "../path/to/icm20948-driver-rust" }
+	Replace `../path/to/icm20948-driver-rust` with the actual relative path to the `icm20948-driver-rust` folder.
+
+
 
 ## **Hardware Requirements**
 ### **Required Components**
