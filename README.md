@@ -30,6 +30,7 @@ Example:
 	use icm20948_driver_rust::imu::{Accelerometer, Gyroscope, IMU};
   use icm20948_driver_rust::spi_core::SpiCore;
 
+
 This makes the structs available for use in your code.
 
 ----------
