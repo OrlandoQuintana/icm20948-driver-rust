@@ -36,7 +36,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut count = 0;
 
     // Step 4: Capture data
-    while count < 100_000 {
+    while count < 1_000_000 {
         let timestamp = start.elapsed().as_secs_f64();
         let accel_data = accel.read()?;
         let gyro_data = gyro.read()?;
